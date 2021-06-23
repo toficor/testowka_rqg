@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: EnemyAmmunitionBase
   m_EditorClassIdentifier: 
   speed: 5
-  tagToAffect: Enemy
+  tagToAffect: Player
+  direction: {x: 0, y: 0, z: -1}
