@@ -21,6 +21,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 915741467, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e57f5aebfbe6d34eb7b3f4a15177a7e, type: 2}
+    - target: {fileID: 1480201636, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.65
+      objectReference: {fileID: 0}
     - target: {fileID: 2960632309975106858, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
       propertyPath: m_Size.x
       value: 1.52
@@ -35,7 +43,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5969204293158614138, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
       propertyPath: m_Name
-      value: NPC_1
+      value: NPC_3V
       objectReference: {fileID: 0}
     - target: {fileID: 6457333938624196288, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
       propertyPath: m_RootOrder
@@ -43,7 +51,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6457333938624196288, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6457333938624196288, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51,7 +59,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6457333938624196288, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.87
       objectReference: {fileID: 0}
     - target: {fileID: 6457333938624196288, guid: ffd39cdc1be026e4fbe48c03baef1111, type: 3}
       propertyPath: m_LocalRotation.w
