@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34da93f9f701b8a4e8129b70b82e324e, type: 3}
+  m_Name: PoolManagerData
+  m_EditorClassIdentifier: 
+  playerAasset:
+    m_AssetGUID: c116ede57a637484fa99b4cc77d48bcd
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  projectile:
+    m_AssetGUID: 222c29ac99ed6d64fba71b7bbd1aac15
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  npc1Asset:
+    m_AssetGUID: ffd39cdc1be026e4fbe48c03baef1111
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  npc2Asset:
+    m_AssetGUID: b03c6bf228c50874888288e83a0d6d16
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  npc3Asset:
+    m_AssetGUID: 08e3821f687371d4d8189aea2539d1f4
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  projectilePoolSize: 0
+  npc1PoolSize: 30
+  npc2PoolSize: 0
+  npc3PoolSize: 0
+  allLoadedPools:
+  - m_AssetGUID: c116ede57a637484fa99b4cc77d48bcd
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: ffd39cdc1be026e4fbe48c03baef1111
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: b03c6bf228c50874888288e83a0d6d16
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 08e3821f687371d4d8189aea2539d1f4
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 222c29ac99ed6d64fba71b7bbd1aac15
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

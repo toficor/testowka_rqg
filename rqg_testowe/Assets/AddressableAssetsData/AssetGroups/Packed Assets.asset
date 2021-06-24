@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Packed Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: Packed Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 314a989026a35924c815efd88c5d3d82
+  m_SerializeEntries:
+  - m_GUID: 43a49cfa1afbd864093762aa17964d9f
+    m_Address: Assets/Prefabs/Enemy/EnemyProjectile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ffd39cdc1be026e4fbe48c03baef1111
+    m_Address: Assets/Prefabs/Enemy/NPC_1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b03c6bf228c50874888288e83a0d6d16
+    m_Address: Assets/Prefabs/Enemy/NPC_2V.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 08e3821f687371d4d8189aea2539d1f4
+    m_Address: Assets/Prefabs/Enemy/NPC_3V.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c116ede57a637484fa99b4cc77d48bcd
+    m_Address: Assets/Prefabs/Player/Player.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 222c29ac99ed6d64fba71b7bbd1aac15
+    m_Address: Assets/Prefabs/Player/Projectile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6d6dd3ffa8cd8eb499fff55073073a03
+    m_Address: Assets/Materials/MainMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 570ec9c844402474f85df02f1a8f0605
+    m_Address: Assets/Sprites/arrow.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b60981a03c0c81c4eb90561c01ff39fc
+    m_Address: Assets/Animations/IdleLoading.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c243c95ad7376f24f8206bcd212cef82
+    m_Address: Assets/Animators/LoadingArrow.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 224c671225722e14c89560790022c32c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2a9b96c9dc707cc48b1e453f07cea301, type: 2}
+    - {fileID: 11400000, guid: ad74233be16c38d4a81d8d1a5ef51c93, type: 2}
