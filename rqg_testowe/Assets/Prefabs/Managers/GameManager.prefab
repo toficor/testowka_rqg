@@ -45,3 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManagerData: {fileID: 11400000, guid: 782a8e3024efa17418642f9d8950304c, type: 2}
   poolManagerData: {fileID: 11400000, guid: 660a122abe4c36c4993878824759f6d8, type: 2}
+  spawnManagerData: {fileID: 11400000, guid: b00d97b6bc0ec8d48beef2921fcd4e29, type: 2}
+  spawnManager: {fileID: 0}

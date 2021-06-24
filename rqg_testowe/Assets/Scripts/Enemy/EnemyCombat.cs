@@ -13,7 +13,7 @@ public class EnemyCombat
     {
         this.barrelTransform = barrelTransform;
         this.enemyData = enemyData;
-        this.shootingTimer = 0f;
+        this.shootingTimer = Random.Range(-1f, -5f);
     }
 
     public void HandleShooting()

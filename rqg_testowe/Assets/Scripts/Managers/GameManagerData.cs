@@ -9,7 +9,9 @@ public class GameManagerData : ScriptableObject
     public Animator gameStateMachine;
     public GameState currentGameState;
 
-    public int CurrentEnemyQuantity;
+    public int currentEnemyQuantity;
+    public int amountOfMovesToChangeDirection;
+    public int timeToNextMove;
 
     public Action OnGameStateChange;
     public Action<int> AfterGameStateChange;   

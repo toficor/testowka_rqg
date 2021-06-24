@@ -34,6 +34,8 @@ public class SpawnManager : MonoBehaviour
     public IEnumerator SpawnWave()
     {
         int gridIndex = 0;
+        spawnerManagerData.allSpawnedEnemyObjects.Clear();
+
         foreach (var element in spawnTemplate)
         {
             for (int i = 0; i < element.quantity; i++)
@@ -45,9 +47,14 @@ public class SpawnManager : MonoBehaviour
                 enemyObject.transform.position = grid[gridIndex];
                 enemyObject.transform.rotation = Quaternion.Euler(0f, 180f, 0);
                 gridIndex++;
-                yield return new WaitForSeconds(0.1f);
+                
+                spawnerManagerData.allSpawnedEnemyObjects.Add(enemyObject.GetComponent<EnemyBase>());
+                //just for visual effect
+                yield return new WaitForSeconds(0.05f);
             }
         }
+
+        spawnerManagerData.OnEnemiesSpawned?.Invoke();
     }
 
     private List<Vector3> GenerateGrid()

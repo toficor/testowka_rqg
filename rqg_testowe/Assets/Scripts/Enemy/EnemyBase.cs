@@ -31,6 +31,11 @@ public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
         }
     }
 
+    public void Move(float direction, Vector3 offset)
+    {
+        transform.position = new Vector3(transform.position.x + (direction * offset.x), transform.position.y , transform.position.z + offset.z);
+    }
+
     public void ReturnToPool()
     {
         MyPool.Enqueue(this.gameObject);
