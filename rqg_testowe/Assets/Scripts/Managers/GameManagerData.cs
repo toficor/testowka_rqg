@@ -5,8 +5,7 @@ using System;
 
 [CreateAssetMenu(fileName = "GameManagerData", menuName = "Managers/GameManagerData")]
 public class GameManagerData : ScriptableObject
-{
-    public Animator gameStateMachine;
+{   
     public GameState currentGameState;
 
     public int currentEnemyQuantity;
@@ -14,7 +13,11 @@ public class GameManagerData : ScriptableObject
     public int timeToNextMove;
 
     public Action OnGameStateChange;
-    public Action<int> AfterGameStateChange;   
+    public Action<int> AfterGameStateChange;
+
+    public Action OnSpawningWave;
+    public Action OnFightingEnemies;
+    public Action OnGameOver;
     
 }
 

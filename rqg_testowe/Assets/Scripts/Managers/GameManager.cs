@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PoolManagerData poolManagerData;
     [SerializeField] private SpawnerManagerData spawnManagerData;
     [SerializeField] private SpawnManager spawnManager;
+    [SerializeField] private Animator gameStateMachine;
 
     private int moveCounter;
     private float direction = -1f;
@@ -16,6 +17,26 @@ public class GameManager : MonoBehaviour
     {
         poolManagerData.OnPoolsDone += ChangeGameState;
         spawnManagerData.OnEnemiesSpawned += StartMovingEnemies;
+        spawnManagerData.OnEnemiesSpawned += StartFighting;
+    }
+
+    private void Update()
+    {
+        var test = gameStateMachine.GetCurrentAnimatorStateInfo(0);
+        if (test.IsName("SpawningWaves"))
+        {
+
+        }
+        else if (test.IsName("FightingWaves"))
+        {
+
+        }
+        else if (test.IsName("GameOver"))
+        { 
+
+        }
+
+
     }
 
     private void StartMovingEnemies()
@@ -47,11 +68,9 @@ public class GameManager : MonoBehaviour
                 moveCounter++;
             }
 
-            
+
         }
     }
-
-
 
     public void ChangeGameState(int gameState)
     {
@@ -64,4 +83,15 @@ public class GameManager : MonoBehaviour
 
         gameManagerData.AfterGameStateChange?.Invoke(gameState);
     }
+
+    public void ChangeGameplayState(Animator stateMachine, string parameter)
+    {
+        stateMachine.SetTrigger(parameter);
+    }
+
+    public void StartFighting()
+    {
+        ChangeGameplayState(gameStateMachine, "FightingWaves");
+    }
+
 }

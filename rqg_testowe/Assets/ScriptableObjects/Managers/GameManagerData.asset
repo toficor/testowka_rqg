@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: GameManagerData
   m_EditorClassIdentifier: 
   gameStateMachine: {fileID: 0}
-  currentGameState: 0
+  currentGameState: 2
+  currentEnemyQuantity: 0
+  amountOfMovesToChangeDirection: 9
+  timeToNextMove: 4
