@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBase : MonoBehaviour
+public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
 {
     [SerializeField] private EnemyData enemyData;
     [SerializeField] private Transform barrelTransform;
     [HideInInspector] public EnemyMovement enemyMovement;
     private EnemyCombat enemyCombat;
+
+    public Queue<GameObject> MyPool { get; set; }
 
     private void Awake()
     {
@@ -19,5 +21,24 @@ public class EnemyBase : MonoBehaviour
     void Update()
     {
         enemyCombat.HandleShooting();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Projectile"))
+        {
+            HandleDestroy();
+        }
+    }
+
+    public void ReturnToPool()
+    {
+        MyPool.Enqueue(this.gameObject);
+    }
+
+    public void HandleDestroy()
+    {
+        gameObject.SetActive(false);
+        ReturnToPool();
     }
 }

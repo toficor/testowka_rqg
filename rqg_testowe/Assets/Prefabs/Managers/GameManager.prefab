@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManagerData: {fileID: 11400000, guid: 782a8e3024efa17418642f9d8950304c, type: 2}
+  poolManagerData: {fileID: 11400000, guid: 660a122abe4c36c4993878824759f6d8, type: 2}

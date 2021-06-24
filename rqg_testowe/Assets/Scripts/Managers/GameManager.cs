@@ -6,12 +6,14 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameManagerData gameManagerData;
     [SerializeField] private PoolManagerData poolManagerData;
-
+    [SerializeField] private SpawnManager spawnManager;
 
     private void Awake()
     {
-        poolManagerData.OnPoolsDone += ChangeGameState;
+        poolManagerData.OnPoolsDone += ChangeGameState;    
     }
+
+
 
     public void ChangeGameState(int gameState)
     {        
@@ -22,6 +24,6 @@ public class GameManager : MonoBehaviour
 
         gameManagerData.currentGameState = (GameState)gameState;
 
-        gameManagerData.AfterGameStateChange?.Invoke();
+        gameManagerData.AfterGameStateChange?.Invoke(gameState);
     }
 }

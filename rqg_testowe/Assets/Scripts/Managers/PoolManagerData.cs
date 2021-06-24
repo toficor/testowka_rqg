@@ -7,8 +7,10 @@ using System;
 [CreateAssetMenu(fileName = "PoolManagerData", menuName = "Managers/PoolManagerData")]
 public class PoolManagerData : ScriptableObject
 {
-
+    //for debug
+   // [HideInInspector]
     public List<PoolData> poolData = new List<PoolData>();
+    public Dictionary<string, Queue<GameObject>> allPools = new Dictionary<string, Queue<GameObject>>();
 
     [Header("Assets")]
     public AssetReference playerAasset;
@@ -28,7 +30,8 @@ public class PoolManagerData : ScriptableObject
 
 
     public Action OnLoadingDone;
-    public Action<int> OnPoolsDone;
+    public Action<int> OnPoolsDone;     
+
 
     [Serializable]
     public class PoolData

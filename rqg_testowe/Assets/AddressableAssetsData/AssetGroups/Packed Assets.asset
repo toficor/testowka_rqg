@@ -20,23 +20,28 @@ MonoBehaviour:
   - m_GUID: 43a49cfa1afbd864093762aa17964d9f
     m_Address: Assets/Prefabs/Enemy/EnemyProjectile.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: ffd39cdc1be026e4fbe48c03baef1111
     m_Address: Assets/Prefabs/Enemy/NPC_1.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: b03c6bf228c50874888288e83a0d6d16
     m_Address: Assets/Prefabs/Enemy/NPC_2V.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 08e3821f687371d4d8189aea2539d1f4
     m_Address: Assets/Prefabs/Enemy/NPC_3V.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: c116ede57a637484fa99b4cc77d48bcd
     m_Address: Assets/Prefabs/Player/Player.prefab
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 222c29ac99ed6d64fba71b7bbd1aac15
     m_Address: Assets/Prefabs/Player/Projectile.prefab
     m_ReadOnly: 0

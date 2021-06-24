@@ -17,8 +17,7 @@ public class GameCanvasManager : MonoBehaviour
     private void Awake()
     {
         gameManagerData.AfterGameStateChange += ManageScreens;
-        //for debug
-        currentScreen = mainMenuScreen;
+        currentScreen = loadingScreen;
     }
 
 
@@ -27,7 +26,7 @@ public class GameCanvasManager : MonoBehaviour
         currentScreen.DoJob();
     }
 
-    private void ManageScreens()
+    private void ManageScreens(int gameState)
     {
         switch (gameManagerData.currentGameState)
         {
