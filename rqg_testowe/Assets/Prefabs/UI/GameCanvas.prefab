@@ -103,8 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenCanvasGroup: {fileID: 501980572}
-  scoreText: {fileID: 0}
-  waveText: {fileID: 0}
+  gameManagerData: {fileID: 11400000, guid: 782a8e3024efa17418642f9d8950304c, type: 2}
+  scoreText: {fileID: 1558201798}
+  waveText: {fileID: 848514829}
 --- !u!1 &695680512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,7 +1626,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1359720726}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: BackToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1359720724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4595,10 +4608,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenCanvasGroup: {fileID: 8796676934052157900}
+  gameManagerData: {fileID: 11400000, guid: 782a8e3024efa17418642f9d8950304c, type: 2}
   playerData: {fileID: 11400000, guid: 747e5627dc03d2a44b0cfa2fddd60695, type: 2}
-  scoreText: {fileID: 0}
-  wavetext: {fileID: 0}
-  lifeText: {fileID: 0}
+  scoreText: {fileID: 2639569872372490833}
+  wavetext: {fileID: 6149671022480939123}
+  lifeText: {fileID: 5683235806636043148}
 --- !u!1 &8183222414600220398
 GameObject:
   m_ObjectHideFlags: 0

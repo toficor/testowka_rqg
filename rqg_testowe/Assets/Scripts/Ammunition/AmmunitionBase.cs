@@ -50,6 +50,10 @@ public class AmmunitionBase : MonoBehaviour, IDestructable, IPooledObject
         }
     }
 
+    public string GetAffectedTag()
+    {
+        return ammunitionData.tagToAffect;
+    }
 
     public virtual void HandleDestroy()
     {

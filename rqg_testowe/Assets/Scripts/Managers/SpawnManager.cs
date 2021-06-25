@@ -20,7 +20,6 @@ public class SpawnManager : MonoBehaviour
     private void Awake()
     {
         grid = GenerateGrid();
-       // gameManagerData.AfterGameStateChange += CreateWave;
     }
 
     public void CreateWave(int gameState)

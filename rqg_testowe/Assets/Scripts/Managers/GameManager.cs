@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
         spawnManagerData.OnEnemiesSpawned += StartFighting;
         playerData.OnPlayerDead += GameOver;
         gameManagerData.currentEnemyQuantity = 0;
+        gameManagerData.currentWave = 0;
+        gameManagerData.score = 0;
     }
 
     private void Update()
@@ -37,6 +39,8 @@ public class GameManager : MonoBehaviour
 
             if (spawningEnemies == null)
             {
+                gameManagerData.wavePassed = gameManagerData.currentWave;
+                gameManagerData.currentWave++;
                 spawningEnemies = StartCoroutine(spawnManager.SpawnWave());
                 moveCounter = 0;
                 direction = -1;
@@ -144,6 +148,12 @@ public class GameManager : MonoBehaviour
     {
         ChangeGameplayState(gameStateMachine, "GameOver");
         ChangeGameState(3);
+    }
+
+    public void BackToMenu()
+    {
+        ChangeGameplayState(gameStateMachine, "Idle");
+        ChangeGameState(1);
     }
 
 }

@@ -12,6 +12,8 @@ public class GameManagerData : ScriptableObject
     public int amountOfMovesToChangeDirection;
     public int timeToNextMove;
     public int score;
+    public int currentWave;
+    public int wavePassed;
 
     public Action OnGameStateChange;
     public Action<int> AfterGameStateChange;

@@ -34,8 +34,9 @@ public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Projectile"))
+        if (gameObject.CompareTag(other.GetComponent<AmmunitionBase>().GetAffectedTag()))
         {
+            OnEnemyDestroy?.Invoke(enemyData.pointsGranted);
             HandleDestroy();
         }
     }
@@ -58,7 +59,6 @@ public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
     public void HandleDestroy()
     {
         gameObject.SetActive(false);
-        OnEnemyDestroy?.Invoke(enemyData.pointsGranted);
         ReturnToPool();
     }
 }
