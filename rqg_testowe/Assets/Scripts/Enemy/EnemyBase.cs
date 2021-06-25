@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
 {
     [SerializeField] private PoolManagerData poolManagerData;
-    [SerializeField] private EnemyData enemyData;
+    [SerializeField] private EnemyData enemyData;    
     [SerializeField] private Transform barrelTransform;
     [HideInInspector] public EnemyMovement enemyMovement;
     private EnemyCombat enemyCombat;
+    private bool enableShooting;
+
+    public Action<int> OnEnemyDestroy;
 
     public Queue<GameObject> MyPool { get; set; }
 
@@ -18,9 +22,13 @@ public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
         enemyCombat = new EnemyCombat(barrelTransform, enemyData, poolManagerData);
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if(enableShooting == false)
+        {
+            return;
+        }
+
         enemyCombat.HandleShooting();
     }
 
@@ -42,9 +50,15 @@ public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
         MyPool.Enqueue(this.gameObject);
     }
 
+    public void EnableShooting()
+    {
+        enableShooting = true;
+    }
+
     public void HandleDestroy()
     {
         gameObject.SetActive(false);
+        OnEnemyDestroy?.Invoke(enemyData.pointsGranted);
         ReturnToPool();
     }
 }

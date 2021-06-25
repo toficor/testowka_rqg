@@ -11,6 +11,7 @@ public class GameManagerData : ScriptableObject
     public int currentEnemyQuantity;
     public int amountOfMovesToChangeDirection;
     public int timeToNextMove;
+    public int score;
 
     public Action OnGameStateChange;
     public Action<int> AfterGameStateChange;
@@ -19,6 +20,11 @@ public class GameManagerData : ScriptableObject
     public Action OnFightingEnemies;
     public Action OnGameOver;
     
+    public void IncreaseScore(int amount)
+    {
+        score += amount;
+        currentEnemyQuantity--;
+    }
 }
 
 public enum GameState

@@ -15,5 +15,4 @@ MonoBehaviour:
   speed: 15
   lives: 3
   shootingDelay: 0.5
-  score: 0
-  ammo: {fileID: 191011703120487441, guid: 222c29ac99ed6d64fba71b7bbd1aac15, type: 3}
+  invincibleTime: 2.5

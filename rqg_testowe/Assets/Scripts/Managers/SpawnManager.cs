@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     private void Awake()
     {
         grid = GenerateGrid();
-        gameManagerData.AfterGameStateChange += CreateWave;
+       // gameManagerData.AfterGameStateChange += CreateWave;
     }
 
     public void CreateWave(int gameState)
@@ -41,14 +41,17 @@ public class SpawnManager : MonoBehaviour
             for (int i = 0; i < element.quantity; i++)
             {               
                 GameObject enemyObject = poolManagerData.allPools[element.poolName].Dequeue();
-                var iPooledObject = enemyObject.GetComponent<IPooledObject>();
-                iPooledObject.MyPool = poolManagerData.allPools[element.poolName];
+                var enemyBase = enemyObject.GetComponent<EnemyBase>();
+                enemyBase.MyPool = poolManagerData.allPools[element.poolName];
+                enemyBase.OnEnemyDestroy += gameManagerData.IncreaseScore;
                 enemyObject.SetActive(true);
                 enemyObject.transform.position = grid[gridIndex];
                 enemyObject.transform.rotation = Quaternion.Euler(0f, 180f, 0);
+                spawnerManagerData.OnEnemiesSpawned += enemyBase.EnableShooting;
                 gridIndex++;
+                gameManagerData.currentEnemyQuantity++;
+                spawnerManagerData.allSpawnedEnemyObjects.Add(enemyBase);
                 
-                spawnerManagerData.allSpawnedEnemyObjects.Add(enemyObject.GetComponent<EnemyBase>());
                 //just for visual effect
                 yield return new WaitForSeconds(0.05f);
             }

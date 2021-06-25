@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455af51e421f605469ed9df87532d6d2, type: 3}
   m_Name: AmmunitionBase
   m_EditorClassIdentifier: 
+  timeToSelfDestruct: 6
   speed: 5
   tagToAffect: Enemy
   direction: {x: 0, y: 0, z: 1}

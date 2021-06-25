@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368456a6df14864680ff480caca13ad, type: 3}
   m_Name: GameManagerData
   m_EditorClassIdentifier: 
-  gameStateMachine: {fileID: 0}
   currentGameState: 2
-  currentEnemyQuantity: 0
+  currentEnemyQuantity: 142
   amountOfMovesToChangeDirection: 9
   timeToNextMove: 4
+  score: 3260

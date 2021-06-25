@@ -20,6 +20,11 @@ public class PlayerMovement
 
     public void HandleMovement()
     {
+        if(playerData.enableMoving == false)
+        {
+            return;
+        }
+
         playerTransform.position += new Vector3(playerInput.Horizontal * playerData.speed * Time.deltaTime, 0f, 0f);
         playerTransform.position = new Vector3(Mathf.Clamp(playerTransform.position.x, -screenBounds.x, screenBounds.x), 0f, playerTransform.position.z);
     }

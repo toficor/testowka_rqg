@@ -22,6 +22,11 @@ public class PlayerCombat
 
     public void HandleShooting()
     {
+        if(playerData.enableShooting == false)
+        {
+            return;
+        }
+
         shootingTimmer += Time.deltaTime;
 
         if (playerInput.IsShooting)
