@@ -21,9 +21,12 @@ public class PoolManagerData : ScriptableObject
     public AssetReference npc2Asset;
     public AssetReference npc3Asset;
 
+    public AssetReference enemyProjectile;
+
 
     [Header("Quantity of pools")]
     public int projectilePoolSize;
+    public int enemyProjectilePoolSize;
     public int npc1PoolSize;
     public int npc2PoolSize;
     public int npc3PoolSize;

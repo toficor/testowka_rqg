@@ -139,5 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c768958c2b1d24ab319e08e6291981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolManagerData: {fileID: 11400000, guid: 660a122abe4c36c4993878824759f6d8, type: 2}
   enemyData: {fileID: 11400000, guid: ebda0c8ccc37a144aaf93d608b6261d7, type: 2}
   barrelTransform: {fileID: 1480201636}

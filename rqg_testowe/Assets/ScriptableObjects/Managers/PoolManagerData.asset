@@ -37,6 +37,12 @@ MonoBehaviour:
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     quantity: 100
+  - assetReference:
+      m_AssetGUID: 43a49cfa1afbd864093762aa17964d9f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    quantity: 100
   playerAasset:
     m_AssetGUID: c116ede57a637484fa99b4cc77d48bcd
     m_SubObjectName: 
@@ -62,7 +68,13 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  enemyProjectile:
+    m_AssetGUID: 43a49cfa1afbd864093762aa17964d9f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   projectilePoolSize: 100
+  enemyProjectilePoolSize: 100
   npc1PoolSize: 30
   npc2PoolSize: 30
   npc3PoolSize: 30

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
 {
+    [SerializeField] private PoolManagerData poolManagerData;
     [SerializeField] private EnemyData enemyData;
     [SerializeField] private Transform barrelTransform;
     [HideInInspector] public EnemyMovement enemyMovement;
@@ -14,7 +15,7 @@ public class EnemyBase : MonoBehaviour, IPooledObject, IDestructable
     private void Awake()
     {
         enemyMovement = new EnemyMovement(transform, Vector3.left);
-        enemyCombat = new EnemyCombat(barrelTransform, enemyData);
+        enemyCombat = new EnemyCombat(barrelTransform, enemyData, poolManagerData);
     }
 
     // Update is called once per frame

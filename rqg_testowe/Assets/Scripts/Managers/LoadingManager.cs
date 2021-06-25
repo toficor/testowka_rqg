@@ -41,6 +41,12 @@ public class LoadingManager : MonoBehaviour
             assetReference = poolManagerData.projectile,
             quantity = poolManagerData.projectilePoolSize
         }); 
+        assets.Add(new PoolManagerData.PoolData
+        {
+            assetReference = poolManagerData.enemyProjectile,
+            quantity = poolManagerData.enemyProjectilePoolSize
+        }); 
+
 
         return assets;
     }

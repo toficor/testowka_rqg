@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Animator gameStateMachine;
 
     private int moveCounter;
-    private float direction = -1f;
+    private float direction = -1f;  
 
     private void Awake()
     {
@@ -22,18 +22,18 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        var test = gameStateMachine.GetCurrentAnimatorStateInfo(0);
-        if (test.IsName("SpawningWaves"))
+        var currentGamePlayState = gameStateMachine.GetCurrentAnimatorStateInfo(0);
+        if (currentGamePlayState.IsName("SpawningWaves"))
         {
-
+           
         }
-        else if (test.IsName("FightingWaves"))
+        else if (currentGamePlayState.IsName("FightingWaves"))
         {
-
+            
         }
-        else if (test.IsName("GameOver"))
-        { 
-
+        else if (currentGamePlayState.IsName("GameOver"))
+        {
+            
         }
 
 

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
     [SerializeField] private Transform barrelTransform;
+    [SerializeField] private PoolManagerData poolManagerData;
 
     private PlayerInput playerInput;
     private PlayerMovement playerMovement;
@@ -15,7 +16,7 @@ public class PlayerController : MonoBehaviour
     {
         playerInput = new PlayerInput();
         playerMovement = new PlayerMovement(playerInput, playerData, transform, Camera.main);
-        playerCombat = new PlayerCombat(playerData, playerInput, barrelTransform);
+        playerCombat = new PlayerCombat(playerData, playerInput, barrelTransform, poolManagerData);
     }
 
     private void Update()
