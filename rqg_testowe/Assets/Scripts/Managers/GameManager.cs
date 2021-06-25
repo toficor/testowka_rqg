@@ -33,9 +33,13 @@ public class GameManager : MonoBehaviour
             playerData.enableMoving = false;
             playerData.enableShooting = false;
 
+            gameManagerData.OnSpawningWave?.Invoke();
+
             if (spawningEnemies == null)
             {
                 spawningEnemies = StartCoroutine(spawnManager.SpawnWave());
+                moveCounter = 0;
+                direction = -1;
                 startSpawning = false;
             }
             if (movingEnemiesCoroutine != null)
@@ -70,15 +74,13 @@ public class GameManager : MonoBehaviour
             StopCoroutine(movingEnemiesCoroutine);
             spawnManagerData.allSpawnedEnemyObjects.ForEach(x => x.HandleDestroy());
         }
-
-
     }
 
     public IEnumerator ManageEnemiesMoving()
     {
         List<EnemyBase> allSpawnedEnemies = new List<EnemyBase>(spawnManagerData.allSpawnedEnemyObjects);
 
-        while (true)
+        while (!allSpawnedEnemies.TrueForAll(x => x.gameObject.activeSelf == false))
         {
             if (moveCounter == gameManagerData.amountOfMovesToChangeDirection)
             {
@@ -86,6 +88,11 @@ public class GameManager : MonoBehaviour
                 moveCounter = 0;
                 foreach (var enemy in allSpawnedEnemies)
                 {
+                    if (!enemy.gameObject.activeSelf)
+                    {
+                        continue;
+                    }
+
                     enemy.Move(0f, -Vector3.forward);
                     yield return new WaitForSeconds(0.1f);
                 }
@@ -94,6 +101,11 @@ public class GameManager : MonoBehaviour
             {
                 foreach (var enemy in allSpawnedEnemies)
                 {
+                    if (!enemy.gameObject.activeSelf)
+                    {
+                        continue;
+                    }
+
                     enemy.Move(direction, Vector3.right);
                     yield return new WaitForSeconds(0.1f);
                 }

@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9e27135bb7ed94da692f299d85563e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerData: {fileID: 11400000, guid: 782a8e3024efa17418642f9d8950304c, type: 2}
   ammunitionData: {fileID: 11400000, guid: 98b8024ad1ab6a24f9533d9c19421044, type: 2}
 --- !u!54 &2970285056030627217
 Rigidbody:

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AmmunitionBase : MonoBehaviour, IDestructable, IPooledObject
 {
+    [SerializeField] private GameManagerData gameManagerData;
     [SerializeField] private AmmunitionData ammunitionData;
 
     protected AmmunitionMovement ammunitionMovement;
@@ -12,7 +13,17 @@ public class AmmunitionBase : MonoBehaviour, IDestructable, IPooledObject
 
     protected virtual void Start()
     {
-        ammunitionMovement = new AmmunitionMovement(ammunitionData, gameObject.transform);
+        ammunitionMovement = new AmmunitionMovement(ammunitionData, gameObject.transform);        
+    }
+
+    private void OnEnable()
+    {
+        gameManagerData.OnSpawningWave += HandleDestroy;
+    }
+
+    private void OnDisable()
+    {
+        gameManagerData.OnSpawningWave -= HandleDestroy;
     }
 
     protected virtual void Update()
