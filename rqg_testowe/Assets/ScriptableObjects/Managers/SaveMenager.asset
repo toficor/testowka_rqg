@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d368456a6df14864680ff480caca13ad, type: 3}
-  m_Name: GameManagerData
+  m_Script: {fileID: 11500000, guid: 13a63f75391bc6e41b72347a2c49b615, type: 3}
+  m_Name: SaveMenager
   m_EditorClassIdentifier: 
-  currentGameState: 2
-  currentEnemyQuantity: 49
-  amountOfMovesToChangeDirection: 9
-  timeToNextMove: 4
-  score: 0
-  currentWave: 1
-  wavePassed: 0
+  playerHighscores: []

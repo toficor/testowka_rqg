@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PoolManagerData poolManagerData;
     [SerializeField] private SpawnerManagerData spawnManagerData;
     [SerializeField] private SpawnManager spawnManager;
+    [SerializeField] private SaveManager saveManager;
     [SerializeField] private Animator gameStateMachine;
 
     private int moveCounter;
@@ -23,8 +25,7 @@ public class GameManager : MonoBehaviour
         spawnManagerData.OnEnemiesSpawned += StartFighting;
         playerData.OnPlayerDead += GameOver;
         gameManagerData.currentEnemyQuantity = 0;
-        gameManagerData.currentWave = 0;
-        gameManagerData.score = 0;
+        ResetPlayerData();
     }
 
     private void Update()
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
                 gameManagerData.wavePassed = gameManagerData.currentWave;
                 gameManagerData.currentWave++;
                 spawningEnemies = StartCoroutine(spawnManager.SpawnWave());
+                gameManagerData.currentEnemyQuantity = 0;
                 moveCounter = 0;
                 direction = -1;
                 startSpawning = false;
@@ -75,8 +77,29 @@ public class GameManager : MonoBehaviour
         }
         else if (currentGamePlayState.IsName("GameOver"))
         {
-            StopCoroutine(movingEnemiesCoroutine);
+            if (movingEnemiesCoroutine != null)
+            {
+                StopCoroutine(movingEnemiesCoroutine);
+            }
             spawnManagerData.allSpawnedEnemyObjects.ForEach(x => x.HandleDestroy());
+        }
+        else if (currentGamePlayState.IsName("Idle"))
+        {
+            ResetPlayerData();
+
+            if (spawningEnemies != null)
+            {
+                StopCoroutine(spawningEnemies);
+            }
+
+            if (movingEnemiesCoroutine != null)
+            {
+                StopCoroutine(movingEnemiesCoroutine);
+            }
+
+            spawningEnemies = null;
+            movingEnemiesCoroutine = null;
+
         }
     }
 
@@ -118,6 +141,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void ResetPlayerData()
+    {
+        gameManagerData.currentWave = 0;
+        gameManagerData.score = 0;
+        playerData.lives = 3;
+    }
+
     public void ChangeGameState(int gameState)
     {
         if (gameManagerData.currentGameState != (GameState)gameState)
@@ -134,7 +164,6 @@ public class GameManager : MonoBehaviour
         stateMachine.SetTrigger(parameter);
     }
 
-
     public void StartSpawning()
     {
         ChangeGameplayState(gameStateMachine, "SpawningWaves");
@@ -147,12 +176,14 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         ChangeGameplayState(gameStateMachine, "GameOver");
+        saveManager.Save(new HighscoreEntry { dateTime = DateTime.UtcNow.ToString(), score = gameManagerData.score });
         ChangeGameState(3);
     }
 
     public void BackToMenu()
     {
         ChangeGameplayState(gameStateMachine, "Idle");
+        spawnManager.ForceDespawn();
         ChangeGameState(1);
     }
 

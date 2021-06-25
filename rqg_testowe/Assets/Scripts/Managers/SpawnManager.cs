@@ -30,6 +30,11 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    public void ForceDespawn()
+    {
+        spawnerManagerData.allSpawnedEnemyObjects.ForEach(x => x.HandleDestroy() );
+    }
+
     public IEnumerator SpawnWave()
     {
         int gridIndex = 0;
