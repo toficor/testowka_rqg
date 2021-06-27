@@ -1,0 +1,129 @@
+ManifestFileVersion: 0
+CRC: 98520992
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1419724564da29c929b748dc04a9b4d9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d9a98828e9556851ebef210917e8ab90
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 20ff358c3ba208443b0a6fb2817024e3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e45a6574c3ff55046b2f856cacf0ed5a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 455af51e421f605469ed9df87532d6d2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0c43179f2a4d5f74aa0975cf39f351ac, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ce9e27135bb7ed94da692f299d85563e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 518ec3ca228197d4d884aeeff0611898, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 73a20f66c93a56a41ae48cbcfa9457a0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f5aa03bcb8d1f1e419e06e8da7df4590, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5d9f945103f716c42b7c0a2c096c6e3f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 13a63f75391bc6e41b72347a2c49b615, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 08d2dcc8665d9644ab88d5eed9cc3499, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 932eaf092fd93d7428151fd4741c4dc7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 24903d773f89e274994cfe8dac512079, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3dd2e23757a8d4246914a7f7ca9ea384, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 19c768958c2b1d24ab319e08e6291981, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d368456a6df14864680ff480caca13ad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b7f416f00456716468c9d506209e07ef, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 34da93f9f701b8a4e8129b70b82e324e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 65e5979b74cb33944944912f5949cf89, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: bf8099c446f7f754c9be63a7d557e943, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+- Class: 225
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Managers/PoolManager.prefab
+- Assets/Prefabs/Player/Player.prefab
+- Assets/Prefabs/UI/GameCanvas.prefab
+- Assets/Prefabs/Enemy/NPC_3V.prefab
+- Assets/Prefabs/Managers/SpawnManager.prefab
+- Assets/Prefabs/Enemy/NPC_1.prefab
+- Assets/Prefabs/Player/Projectile.prefab
+- Assets/Prefabs/Managers/GameManager.prefab
+- Assets/Prefabs/Enemy/NPC_2V.prefab
+- Assets/Prefabs/Enemy/EnemyProjectile.prefab
+- Assets/Prefabs/Managers/LoadingManager.prefab
+Dependencies:
+- D:/rqg_test/testowka_rqg/rqg_testowe/Assets/AssetBundles/configfiles
+- D:/rqg_test/testowka_rqg/rqg_testowe/Assets/AssetBundles/textures

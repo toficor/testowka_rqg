@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 4013200484
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 770d181cdeb78e46fb3e504cc2e8f7f1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 48686be5e8dc6ce8cbc1c81ab9e65178
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 455af51e421f605469ed9df87532d6d2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 13a63f75391bc6e41b72347a2c49b615, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 24903d773f89e274994cfe8dac512079, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3dd2e23757a8d4246914a7f7ca9ea384, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d368456a6df14864680ff480caca13ad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b7f416f00456716468c9d506209e07ef, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 34da93f9f701b8a4e8129b70b82e324e, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ScriptableObjects/Managers/GameManagerData.asset
+- Assets/ScriptableObjects/Enemy/NPC_3.asset
+- Assets/ScriptableObjects/Enemy/NPC_2.asset
+- Assets/ScriptableObjects/Managers/SpawnerManagerData.asset
+- Assets/ScriptableObjects/Player/PlayerData.asset
+- Assets/ScriptableObjects/Ammunition/AmmunitionBase.asset
+- Assets/ScriptableObjects/Enemy/NPC_1.asset
+- Assets/ScriptableObjects/Managers/PoolManagerData.asset
+- Assets/ScriptableObjects/Ammunition/EnemyAmmunitionBase.asset
+- Assets/ScriptableObjects/Managers/SaveMenager.asset
+Dependencies:
+- D:/rqg_test/testowka_rqg/rqg_testowe/Assets/AssetBundles/prefabs
